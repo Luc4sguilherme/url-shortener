@@ -1,5 +1,9 @@
 # A simple URL Shortener
 
+![print-dark](https://user-images.githubusercontent.com/29242243/160250409-d081a8d3-70ed-490a-b80e-81f3d959c807.png)
+![print-light](https://user-images.githubusercontent.com/29242243/160250413-60702a3c-2a70-4f2f-9984-7d844bf8b814.png)
+
+
 ## 🚀 Technologies
 
 This project was developed with the following technologies:
