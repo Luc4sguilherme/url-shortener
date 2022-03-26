@@ -56,7 +56,7 @@ function SignIn() {
       <div className="signin-form">
         <div className="signin-form-group">
           <input
-            type="text"
+            type="email"
             name="email"
             id="email"
             onChange={event => {
@@ -68,7 +68,7 @@ function SignIn() {
         </div>
         <div className="signin-form-group">
           <input
-            type="text"
+            type="password"
             name="password"
             id="password"
             onChange={event => {
