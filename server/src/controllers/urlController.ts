@@ -19,10 +19,6 @@ export async function list(req: AuthRequest, res: Response) {
 
     const urls = await Url.find<URLDoc>({ user_id: userId });
 
-    if (urls.length === 0) {
-      return res.sendStatus(404);
-    }
-
     return res.send(JSON.stringify(urls));
   } catch (error) {
     if (error instanceof Error) {
