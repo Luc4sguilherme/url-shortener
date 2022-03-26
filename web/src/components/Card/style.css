@@ -1,0 +1,123 @@
+.card-wrapper {
+  width: 98%;
+  background: var(--primaryBg);
+  box-shadow: var(--primaryShadowBg);
+  border-radius: 4px;
+  display: flex;
+  margin: 10px 0;
+  padding: 5px 10px;
+}
+
+.links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.infos-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clicks-link {
+  padding-top: 2px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--primaryText);
+}
+
+.original-link {
+  padding-bottom: 5px;
+}
+
+.short-link,
+.original-link {
+  width: 90%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+}
+
+.original-link p,
+.short-link a {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.original-link p {
+  color: var(--primaryText);
+  display: block;
+}
+
+.short-link a {
+  color: #2281c2;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+
+.copy-link,
+.delete-link,
+.stats-link {
+  border: 0;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: none;
+  color: var(--primaryText);
+  transition: background-color 0.3s;
+}
+
+.copy-link:hover,
+.delete-link:hover,
+.stats-link:hover {
+  background-color: var(--primaryBgHover);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  color: var(--primaryButton);
+}
+
+.close-modal-btn:hover {
+  opacity: 0.5;
+}
+
+.save-file-btn {
+  bottom: 15px;
+  border: none;
+  background: #909398;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.save-file-btn:hover {
+  background: var(--primaryButton);
+}
+
+@media only screen and (max-width: 750px) {
+  .short-link,
+  .original-link {
+    font-size: 14px;
+  }
+
+  .clicks-link {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,11 @@
+html[data-theme="dark"] {
+  --primaryTheme: #28384a;
+  --primaryBg: #263238;
+  --primaryBgHover: rgba(255, 255, 255, 0.5);
+  --primaryText: #f0f0f0;
+  --primaryButton: #2c87c5;
+  --primaryButtonText: #fff;
+  --primaryShadowBg: 0 1px 3px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(255, 255, 255, 0.4);
+  --primaryScrollBar: #ccc;
+  --secondaryScrollBar: rgba(204, 204, 204, 0.6);
+}
