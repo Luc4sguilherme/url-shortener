@@ -96,6 +96,10 @@ function Card({ short, full, clicks, urls, setUrls }: CardProps) {
             <ContentCopyIcon fontSize="small" />
           </button>
 
+          <button type="button" className="stats-link" onClick={handleOpen}>
+            <QrCode2Icon fontSize="small" />
+          </button>
+
           <button
             type="button"
             className="delete-link"
@@ -104,10 +108,6 @@ function Card({ short, full, clicks, urls, setUrls }: CardProps) {
             }}
           >
             <DeleteIcon fontSize="small" />
-          </button>
-
-          <button type="button" className="stats-link" onClick={handleOpen}>
-            <QrCode2Icon fontSize="small" />
           </button>
 
           <Modal open={open} handleClose={handleClose}>
