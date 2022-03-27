@@ -1,10 +1,9 @@
 import axios from 'axios';
 
-const HOST = import.meta.env.VITE_API_URL || 'http://localhost';
-const PORT = import.meta.env.VITE_API_PORT || 3333;
+import config from '../config';
 
 const api = axios.create({
-  baseURL: `${HOST}:${PORT}`,
+  baseURL: config.App.host,
 });
 
 export default api;

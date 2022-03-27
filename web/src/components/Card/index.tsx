@@ -15,8 +15,10 @@ import formatUrl from '../../util/formatURL';
 import Modal from '../Modal';
 import QRCode from '../QRCode';
 
-const HOST = formatUrl(String(import.meta.env.VITE_API_URL));
 const PORT = import.meta.env.DEV ? ':3000' : '';
+const HOST = import.meta.env.DEV
+  ? 'localhost'
+  : formatUrl(import.meta.env.BASE_URL);
 
 interface URL {
   full: string;

@@ -19,7 +19,7 @@ function Redirect() {
 
   async function handler() {
     try {
-      const { data } = await api.get(`http://localhost:3333/${shortUrl}`);
+      const { data } = await api.get(`/${shortUrl}`);
 
       window.location.href = data.url;
     } catch (error) {
