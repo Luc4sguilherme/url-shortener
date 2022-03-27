@@ -60,6 +60,7 @@
   font-weight: 500;
   text-decoration: none;
   display: block;
+  max-width: fit-content;
 }
 
 .copy-link,
