@@ -45,7 +45,9 @@ function Card({ short, full, clicks, urls, setUrls }: CardProps) {
 
   async function handleSaveFile(text: string) {
     try {
-      const url = await qrcode.toDataURL(`${HOST}${PORT}/${text}`);
+      const url = await qrcode.toDataURL(`${HOST}${PORT}/${text}`, {
+        scale: 10,
+      });
       const link = document.createElement('a');
 
       link.download = `qrcode-${text}.png`;

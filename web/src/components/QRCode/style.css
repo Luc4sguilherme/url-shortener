@@ -6,11 +6,25 @@
 }
 
 #canvas {
-  min-width: 250px;
-  min-height: 250px;
+  min-width: 350px;
+  min-height: 350px;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1250px) {
+  #canvas {
+    min-width: 300px;
+    min-height: 300px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #canvas {
+    min-width: 250px;
+    min-height: 250px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
   #canvas {
     min-width: 200px;
     min-height: 200px;
@@ -18,7 +32,7 @@
 }
 
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 400px) {
   #canvas {
     min-width: 150px;
     min-height: 150px;
