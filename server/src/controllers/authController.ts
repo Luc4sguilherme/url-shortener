@@ -15,10 +15,11 @@ export async function register(req: Request, res: Response) {
 
     const user = await User.create({ name, email, password });
 
-    user.password = undefined;
-
     return res.send({
-      user,
+      user: {
+        name,
+        email,
+      },
       token: AuthService.generateToken(user.id),
     });
   } catch (error) {
@@ -49,10 +50,10 @@ export async function authenticate(req: Request, res: Response) {
       return res.status(400).send({ error: 'Invalid password!' });
     }
 
-    user.password = undefined;
-
     return res.send({
-      user,
+      user: {
+        email,
+      },
       token: AuthService.generateToken(user.id),
     });
   } catch (error) {
