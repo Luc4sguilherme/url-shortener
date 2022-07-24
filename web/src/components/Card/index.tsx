@@ -58,11 +58,11 @@ function Card({ short, full, clicks, urls, setUrls }: CardProps) {
     }
   }
 
-  async function handleDelete(shortUrl: string) {
+  async function handleDelete(shortUrlID: string) {
     try {
-      await api.delete(`/${shortUrl}`);
+      await api.delete(`/${shortUrlID}`);
 
-      const newList = urls.filter(item => item.short !== shortUrl);
+      const newList = urls.filter(item => item.short !== shortUrlID);
 
       setUrls(newList);
     } catch (error) {

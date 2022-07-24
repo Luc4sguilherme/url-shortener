@@ -7,8 +7,8 @@ import { authMiddleware } from '@src/middlewares/auth';
 const router = express.Router();
 
 router.get('/', authMiddleware, urlController.list);
-router.get('/:shortUrl', urlController.access);
-router.delete('/:shortUrl', authMiddleware, urlController.remove);
+router.get('/:shortUrlID', urlController.access);
+router.delete('/:shortUrlID', authMiddleware, urlController.remove);
 
 router.post(
   '/shorten',

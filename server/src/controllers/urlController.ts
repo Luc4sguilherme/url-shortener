@@ -34,7 +34,7 @@ export async function list(req: AuthRequest, res: Response) {
 export async function access(req: AuthRequest, res: Response) {
   try {
     const url = await Url.findOne<URLDoc>({
-      short: req.params.shortUrl,
+      short: req.params.shortUrlID,
     });
 
     if (url === null) {
@@ -93,12 +93,12 @@ export async function shorten(req: AuthRequest, res: Response) {
 
 export async function remove(req: AuthRequest, res: Response) {
   try {
-    const { shortUrl } = req.params;
+    const { shortUrlID } = req.params;
     const userId = `${req.context?.userId}`;
 
     const url = await Url.deleteOne({
       user_id: userId,
-      short: shortUrl,
+      short: shortUrlID,
     });
 
     if (url.deletedCount === 0) {

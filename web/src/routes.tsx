@@ -15,11 +15,11 @@ import Login from './pages/Login';
 import api from './services/api';
 
 function Redirect() {
-  const { shortUrl } = useParams();
+  const { shortUrlID } = useParams();
 
   async function handler() {
     try {
-      const { data } = await api.get(`/${shortUrl}`);
+      const { data } = await api.get(`/${shortUrlID}`);
 
       window.location.href = data.url;
     } catch (error) {
@@ -29,7 +29,7 @@ function Redirect() {
 
   useEffect(() => {
     handler();
-  }, [shortUrl]);
+  }, [shortUrlID]);
 
   return <Outlet />;
 }
@@ -50,7 +50,7 @@ function RoutesContainer() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path=":shortUrl" element={<Redirect />} />
+        <Route path=":shortUrlID" element={<Redirect />} />
         <Route path="*" element={<PrivatedRoute />} />
       </Routes>
     </BrowserRouter>
